@@ -272,31 +272,31 @@
           <select name="propiedad" size="1">
             <option value=""              <?php if($_POST['propiedad'] == '')               { echo ' selected = "selected"';} ?> >Escoja</option>
             <option value="Bien"          <?php if($_POST['propiedad'] == 'Bien')           { echo ' selected = "selected"';} ?> >Bien</option>
-            <option value="Daños Menores" <?php if($_POST['propiedad'] == 'Daños Menores')  { echo ' selected = "selected"';} ?> >Daños Menores</option>
-            <option value="Daños Mayores" <?php if($_POST['propiedad'] == 'Daños Mayores')  { echo ' selected = "selected"';} ?> >Daños Mayores</option>
-            <option value="Pérdida Total" <?php if($_POST['propiedad'] == 'Pérdida Total')  { echo ' selected = "selected"';} ?> >Pérdida Total</option>
+            <option value="Danos Menores" <?php if($_POST['propiedad'] == 'Daños Menores')  { echo ' selected = "selected"';} ?> >Daños Menores</option>
+            <option value="Danos Mayores" <?php if($_POST['propiedad'] == 'Daños Mayores')  { echo ' selected = "selected"';} ?> >Daños Mayores</option>
+            <option value="Perdida Total" <?php if($_POST['propiedad'] == 'Pérdida Total')  { echo ' selected = "selected"';} ?> >Pérdida Total</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="comida">Comida: *</label><br>
           <select name="comida" size="1">
-            <option value=""              <?php if($_POST['comida'] == '')              { echo ' selected = "selected"';} ?> >Escoja</option>
-            <option value="Nada"          <?php if($_POST['comida'] == 'Nada')          { echo ' selected = "selected"';} ?> >Nada</option>
-            <option value="1 Semana"      <?php if($_POST['comida'] == '1 Semana')      { echo ' selected = "selected"';} ?> >1 Semana</option>
-            <option value="2 Semanas"     <?php if($_POST['comida'] == '2 Semanas')     { echo ' selected = "selected"';} ?> >2 Semanas</option>
-            <option value="3+ Semanas"    <?php if($_POST['comida'] == '3+ Semanas')    { echo ' selected = "selected"';} ?> >3+ Semanas</option>
+            <option value=""              <?php if($_POST['comida'] == '')            { echo ' selected = "selected"';} ?> >Escoja</option>
+            <option value="Nada"          <?php if($_POST['comida'] == 'Nada')        { echo ' selected = "selected"';} ?> >Nada</option>
+            <option value="Poca"          <?php if($_POST['comida'] == 'Poca')        { echo ' selected = "selected"';} ?> >Poca</option>
+            <option value="Suficiente"    <?php if($_POST['comida'] == 'Suficiente')  { echo ' selected = "selected"';} ?> >Suficiente</option>
+            <option value="Mucha"         <?php if($_POST['comida'] == 'Mucha')       { echo ' selected = "selected"';} ?> >Mucha</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="agua">Agua: *</label><br>
           <select name="agua" size="1">
-            <option value=""              <?php if($_POST['agua'] == '')              { echo ' selected = "selected"';} ?> >Escoja</option>
-            <option value="Nada"          <?php if($_POST['agua'] == 'Nada')          { echo ' selected = "selected"';} ?> >Nada</option>
-            <option value="1 Semana"      <?php if($_POST['agua'] == '1 Semana')      { echo ' selected = "selected"';} ?> >1 Semana</option>
-            <option value="2 Semanas"     <?php if($_POST['agua'] == '2 Semanas')     { echo ' selected = "selected"';} ?> >2 Semanas</option>
-            <option value="3+ Semanas"    <?php if($_POST['agua'] == '3+ Semanas')    { echo ' selected = "selected"';} ?> >3+ Semanas</option>
+            <option value=""              <?php if($_POST['agua'] == '')            { echo ' selected = "selected"';} ?> >Escoja</option>
+            <option value="Nada"          <?php if($_POST['agua'] == 'Nada')        { echo ' selected = "selected"';} ?> >Nada</option>
+            <option value="Poca"          <?php if($_POST['agua'] == 'Poca')        { echo ' selected = "selected"';} ?> >Poca</option>
+            <option value="Suficiente"    <?php if($_POST['agua'] == 'Suficiente')  { echo ' selected = "selected"';} ?> >Suficiente</option>
+            <option value="Mucha"         <?php if($_POST['agua'] == 'Mucha')       { echo ' selected = "selected"';} ?> >Mucha</option>
           </select>
         </div>
 
