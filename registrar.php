@@ -326,7 +326,7 @@
 
         <div class="form-group">
           <label for="otro">Otro:</label>
-          <textarea type="text" class="form-control" rows="5" name="otro" value="<?php print_r($_POST['otro']); ?>">Aqui puede poner otra información que quiere que sus familiares sepan como donde encontrarlo, etc.</textarea>
+          <textarea class="form-control" name="otro" rows="5" placeholder="Aqui puede poner otra información que quiere que sus familiares sepan como donde encontrarlo, etc." value="<?php print_r($_POST['otro']); ?>"></textarea>
         </div>
 
         <button type="submit" class="btn btn-default">Someter</button>
