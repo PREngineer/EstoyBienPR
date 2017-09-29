@@ -193,6 +193,7 @@ function search_count($buscar, $valor)
             }
 
             echo '
+            <div class="table-responsive">
             <div class="panel panel-default">
               <!-- Default panel contents -->
               <div class="panel-heading">' . $num . ' resultado(s)</div>
@@ -201,7 +202,7 @@ function search_count($buscar, $valor)
               </div>
 
               <!-- Table -->
-              <table class="table table-responsive">
+              <table class="table table-hover">
                 <thead>
                   <tr>
                     <th>Número de Récord</th>
@@ -265,7 +266,7 @@ function search_count($buscar, $valor)
 
         </table>
       </div>
-
+      </div>
     </div>
 
 <!-- ******************* Footer Section ******************* -->
