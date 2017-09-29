@@ -139,9 +139,9 @@
         </div>
 
         <div class="form-group">
-          <label for="pueblo">Pueblo:</label>
+          <label for="pueblo">Pueblo: *</label>
           <select name="pueblo" size="1">
-            <option value=""              <?php if($_POST['pueblo'] == '')              { echo ' selected = "selected"';} ?> >Seleccione el pueblo</option>
+            <option value=""              <?php if($_POST['pueblo'] == '')              { echo ' selected = "selected"';} ?> >Escoja</option>
             <option value="Adjuntas"      <?php if($_POST['pueblo'] == 'Adjuntas')      { echo ' selected = "selected"';} ?> >Adjuntas</option>
             <option value="Aguada"        <?php if($_POST['pueblo'] == 'Aguada')        { echo ' selected = "selected"';} ?> >Aguada</option>
             <option value="Aguadilla"     <?php if($_POST['pueblo'] == 'Aguadilla')     { echo ' selected = "selected"';} ?> >Aguadilla</option>
@@ -224,7 +224,7 @@
         </div>
 
         <div class="form-group">
-          <label for="zip">Zip:</label>
+          <label for="zip">Zip: *</label>
           <input type="text" class="form-control" name="zip">
         </div>
 
