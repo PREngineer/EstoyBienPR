@@ -84,20 +84,7 @@
         // If the post is not empty and there are no errors
         if(empty($_POST) === false && empty($errors) === true)
         {
-          // Save the nfpo data in array
-          $data = array(
-              'nombre'        => $_POST['nombre'],
-              'pueblo'        => $_POST['pueblo'],
-              'zip'           => $_POST['zip'],
-              'salud'         => $_POST['salud'],
-              'propiedad'     => $_POST['propiedad'],
-              'comida'        => $_POST['comida'],
-              'agua'          => $_POST['agua'],
-              'elec'          => $_POST['elec'],
-              'comunicacion'  => $_POST['comunicacion']
-            );
-
-          // Create the NFPO entry in DB
+          // Create the entry in DB
 
           //MySQL Connection Parameters
           $error_message = 'Sorry, DB connection error.  Please refresh the page.';
