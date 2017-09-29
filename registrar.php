@@ -1,65 +1,3 @@
-<?php
-
-// If the POST has information
-if(empty($_POST) === false)
-{
-  // Establish which fields are required
-  $required_fields = array('nombre', 'pueblo', 'zip', 'salud', 'propiedad', 'comida', 'agua', 'elec', 'comunicacion');
-
-  // Check all the values provided in the post
-  foreach($_POST as $key=>$value)
-  {
-    // If any of the required fields are not provided
-    if( (empty($value) && in_array($key, $required_fields) === true) )
-    {
-      // Make an error that says it.
-      $errors[] = 'Los campos con asteriscos (*) son necesarios.';
-      break 1;
-    }
-  }
-
-  // If the post is not empty and there are no errors
-  if(empty($_POST) === false && empty($errors) === true)
-  {
-    // Save the nfpo data in array
-    $data = array(
-        'nombre'        => $_POST['nombre'],
-        'pueblo'        => $_POST['pueblo'],
-        'zip'           => $_POST['zip'],
-        'salud'         => $_POST['salud'],
-        'propiedad'     => $_POST['propiedad'],
-        'comida'        => $_POST['comida'],
-        'agua'          => $_POST['agua'],
-        'elec'          => $_POST['elec'],
-        'comunicacion'  => $_POST['comunicacion']
-      );
-
-    // Create the NFPO entry in DB
-    //guardar($data);
-
-    // Enable Success Message
-    $success = true;
-  }
-
-  // If there are errors
-  else if(empty($errors) === false)
-  {
-    echo '<div class="alert alert-danger alert-dismissible" role="alert">';
-    // Display the errors
-    echo $errors;
-    echo '</div>';
-  }
-
-  // If the Registration went through
-  if($success === true)
-  {
-    echo '<div class="alert alert-success alert-dismissible" role="alert">Información guardada.</div>';
-  }
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -123,7 +61,68 @@ if(empty($_POST) === false)
     <!-- ******************* Actual Content Section ******************* -->
     <div class="container" id="Content" name="Content">
 
+      <?php
 
+      // If the POST has information
+      if(empty($_POST) === false)
+      {
+        // Establish which fields are required
+        $required_fields = array('nombre', 'pueblo', 'zip', 'salud', 'propiedad', 'comida', 'agua', 'elec', 'comunicacion');
+
+        // Check all the values provided in the post
+        foreach($_POST as $key=>$value)
+        {
+          // If any of the required fields are not provided
+          if( (empty($value) && in_array($key, $required_fields) === true) )
+          {
+            // Make an error that says it.
+            $errors[] = 'Los campos con asteriscos (*) son necesarios.';
+            break 1;
+          }
+        }
+
+        // If the post is not empty and there are no errors
+        if(empty($_POST) === false && empty($errors) === true)
+        {
+          // Save the nfpo data in array
+          $data = array(
+              'nombre'        => $_POST['nombre'],
+              'pueblo'        => $_POST['pueblo'],
+              'zip'           => $_POST['zip'],
+              'salud'         => $_POST['salud'],
+              'propiedad'     => $_POST['propiedad'],
+              'comida'        => $_POST['comida'],
+              'agua'          => $_POST['agua'],
+              'elec'          => $_POST['elec'],
+              'comunicacion'  => $_POST['comunicacion']
+            );
+
+          // Create the NFPO entry in DB
+          //guardar($data);
+
+          // Enable Success Message
+          $success = true;
+        }
+
+        // If there are errors
+        else if(empty($errors) === false)
+        {
+          echo '<div class="alert alert-danger alert-dismissible" role="alert">';
+          // Display the errors
+          echo $errors;
+          echo '</div>';
+        }
+
+        // If the Registration went through
+        if($success === true)
+        {
+          echo '<div class="alert alert-success alert-dismissible" role="alert">Información guardada.</div>';
+        }
+      }
+
+      ?>
+
+      
       <h1>Registrar persona</h1>
 
       <p>Por favor provea la siguiente información.</p>
