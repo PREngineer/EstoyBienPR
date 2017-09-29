@@ -186,41 +186,45 @@ function search_count($buscar, $valor)
               }
               else
               {
-                echo '<div class="alert alert-danger alert-dismissible" role="alert">
-                      Debe especificar lo que busca.
-                      </div>';
+                echo '
+      <div class="alert alert-danger alert-dismissible" role="alert">
+      Debe especificar lo que busca.
+      </div>';
               }
             }
 
-            echo '
-            <div class="table-responsive">
-            <div class="panel panel-default">
-              <!-- Default panel contents -->
-              <div class="panel-heading">' . $num . ' resultado(s)</div>
-              <div class="panel-body">
-                <p>Los resultados estan ordenados por pueblo y luego por nombre.</p>
-              </div>
+                echo '
+      <div class="table-responsive">
 
-              <!-- Table -->
-              <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th>Número de Récord</th>
-                    <th>Nombre</th>
-                    <th>Edad</th>
-                    <th>Pueblo</th>
-                    <th>Zip Code</th>
-                    <th>Salud</th>
-                    <th>Propiedad</th>
-                    <th>Comida</th>
-                    <th>Agua</th>
-                    <th>Electricidad</th>
-                    <th>Comunicación</th>
-                    <th>Contacto</th>
-                    <th>Otro</th>
-                    <th>Fecha de Informe</th>
-                </tr>
-                </thead>';
+        <!-- Default panel contents -->
+        <div class="panel-heading">
+        ' . $num . ' resultado(s)
+        </div>
+
+        <div class="panel-body">
+          <p>Los resultados estan ordenados por pueblo y luego por nombre.</p>
+        </div>
+
+        <!-- Table -->
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Número de Récord</th>
+              <th>Nombre</th>
+              <th>Edad</th>
+              <th>Pueblo</th>
+              <th>Zip Code</th>
+              <th>Salud</th>
+              <th>Propiedad</th>
+              <th>Comida</th>
+              <th>Agua</th>
+              <th>Electricidad</th>
+              <th>Comunicación</th>
+              <th>Contacto</th>
+              <th>Otro</th>
+              <th>Fecha de Informe</th>
+            </tr>
+          </thead>';
 
             $i = 0;
             // Go over every result and display on the table.
@@ -242,22 +246,24 @@ function search_count($buscar, $valor)
               $timestamp    = mysql_result($result, $i, "timestamp");
 
               echo '
-              <tr>
-                <td>' . ($i+1) .'</td>
-                <td>' . $nombre .'</td>
-                <td>' . $edad .'</td>
-                <td>' . $pueblo .'</td>
-                <td>' . $zip .'</td>
-                <td>' . $salud .'</td>
-                <td>' . $propiedad .'</td>
-                <td>' . $comida .'</td>
-                <td>' . $agua .'</td>
-                <td>' . $electricidad .'</td>
-                <td>' . $comunicacion .'</td>
-                <td>' . $contacto .'</td>
-                <td>' . $otro .'</td>
-                <td>' . $timestamp .'</td>
-              </tr>';
+          <tbody>
+            <tr>
+              <td>' . ($i+1) .'</td>
+              <td>' . $nombre .'</td>
+              <td>' . $edad .'</td>
+              <td>' . $pueblo .'</td>
+              <td>' . $zip .'</td>
+              <td>' . $salud .'</td>
+              <td>' . $propiedad .'</td>
+              <td>' . $comida .'</td>
+              <td>' . $agua .'</td>
+              <td>' . $electricidad .'</td>
+              <td>' . $comunicacion .'</td>
+              <td>' . $contacto .'</td>
+              <td>' . $otro .'</td>
+              <td>' . $timestamp .'</td>
+            </tr>
+          </tbody>';
 
               $i++;
             }
@@ -265,7 +271,6 @@ function search_count($buscar, $valor)
           ?>
 
         </table>
-      </div>
       </div>
     </div>
 
