@@ -272,7 +272,7 @@ function search_count($buscar, $valor)
 <!-- ******************* Footer Section ******************* -->
     <div class="container">
       <div class="nav navbar-inverse">
-        <p class="text-center text-muted">© 2017 Jorge Pabón Cruz - pianistapr@hotmail.com</p>
+        <p class="text-center text-muted">2017 Jorge Pabón Cruz - pianistapr@hotmail.com</p>
       </div>
     </div>
 
