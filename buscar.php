@@ -173,8 +173,6 @@ function search_count($buscar, $valor)
             { // Display by name
               $result = display_all();
               $num    = count_all();
-
-              print_r($result);
             }
             // If page has posted
             else
@@ -186,7 +184,7 @@ function search_count($buscar, $valor)
                 $string = mysql_real_escape_string($_POST['valor']);
                 $result = search($_POST['buscar'], $string);
                 $num    = search_count($_POST['buscar'], $string);
-                print_r($result);
+                echo $_POST['buscar'] . " " . $string;
               }
               else
               {
