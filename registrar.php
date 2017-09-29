@@ -76,7 +76,7 @@
           if( (empty($value) && in_array($key, $required_fields) === true) )
           {
             // Make an error that says it.
-            $errors[] = 'Los campos con asteriscos (*) son necesarios.';
+            $errors = 'Los campos con asteriscos (*) son necesarios.';
             break 1;
           }
         }
