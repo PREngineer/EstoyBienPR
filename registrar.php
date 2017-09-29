@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <h1>Registrar persona</h1>
 
 <p>Por favor provea la siguiente información.</p>
@@ -5,7 +9,7 @@
 <form>
   <div class="form-group">
     <label for="nombres">Nombre:</label>
-    <input type="text" class="form-control" id="nombres">
+    <input required="required" type="text" class="form-control" id="nombres">
   </div>
   <div class="form-group">
     <label for="edad">Edad:</label>
@@ -13,7 +17,7 @@
   </div>
   <div class="form-group">
     <label for="pueblo">Pueblo:</label>
-    <input type="text" class="form-control" id="pueblo">
+    <input required="required" type="text" class="form-control" id="pueblo">
   </div>
   <div class="form-group">
     <label for="zip">Zip:</label>
@@ -21,27 +25,27 @@
   </div>
   <div class="form-group">
     <label for="salud">Salud:</label>
-    <input type="text" class="form-control" id="salud">
+    <input required="required" type="text" class="form-control" id="salud">
   </div>
   <div class="form-group">
     <label for="propiedad">Propiedad:</label>
-    <input type="text" class="form-control" id="propiedad">
+    <input required="required" type="text" class="form-control" id="propiedad">
   </div>
   <div class="form-group">
     <label for="comida">Comida:</label>
-    <input type="text" class="form-control" id="comida">
+    <input required="required" type="text" class="form-control" id="comida">
   </div>
   <div class="form-group">
     <label for="agua">Agua:</label>
-    <input type="text" class="form-control" id="agua">
+    <input required="required" type="text" class="form-control" id="agua">
   </div>
   <div class="form-group">
     <label for="elec">Electricidad:</label>
-    <input type="text" class="form-control" id="elec">
+    <input required="required" type="text" class="form-control" id="elec">
   </div>
   <div class="form-group">
     <label for="comunicacion">Comunicación:</label>
-    <input type="text" class="form-control" id="comunicacion">
+    <input required="required" type="text" class="form-control" id="comunicacion">
   </div>
   <div class="form-group">
     <label for="contacto">Contacto:</label>

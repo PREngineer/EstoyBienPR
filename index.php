@@ -4,7 +4,7 @@
   <!-- ******************* Head Section ******************* -->
   <head>
     <!-- Application Name -->
-    <title>Event Manager</title>
+    <title>Estoy Bien! PR</title>
 
     <!-- Encoding and Mobile First -->
     <meta charset="utf-8">
