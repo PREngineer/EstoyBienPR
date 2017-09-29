@@ -161,7 +161,7 @@ function search_count($buscar, $valor)
             <option value="zip"     <?php if($_POST['buscar'] == 'zip')      { echo ' selected = "selected"';} ?>>Zip Code</option>
         </select>
         <!-- Search box -->
-        <input type="text" placeholder="Buscar..." name="valor" value="<?php print_r($_POST['valor']); ?>">
+        <input type="text" name="valor" placeholder="Buscar..." value="<?php print_r($_POST['valor']); ?>">
         <!-- GO! button -->
         <button type="submit" class="btn btn-default">Buscar</button>
       </form>
@@ -181,10 +181,9 @@ function search_count($buscar, $valor)
               if(empty($_POST['valor']) === false)
               {
                 // Display the results of the search
-                $string = mysql_real_escape_string($_POST['valor']);
-                $result = search($_POST['buscar'], $string);
-                $num    = search_count($_POST['buscar'], $string);
-                echo $_POST['buscar'] . " " . $string;
+                $result = search($_POST['buscar'], $_POST['valor']);
+                $num    = search_count($_POST['buscar'], $_POST['valor']);
+                echo $_POST['buscar'] . " - " . $_POST['valor'];
               }
               else
               {
