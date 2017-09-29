@@ -246,7 +246,6 @@ function search_count($buscar, $valor)
               $timestamp    = mysql_result($result, $i, "timestamp");
 
               echo '
-          <tbody>
             <tr>
               <td>' . ($i+1) .'</td>
               <td>' . $nombre .'</td>
@@ -262,8 +261,7 @@ function search_count($buscar, $valor)
               <td>' . $contacto .'</td>
               <td>' . $otro .'</td>
               <td>' . $timestamp .'</td>
-            </tr>
-          </tbody>';
+            </tr>';
 
               $i++;
             }
