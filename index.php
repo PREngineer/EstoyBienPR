@@ -71,7 +71,7 @@
     <!-- ******************* Actual Content Section ******************* -->
     <div class="container" id="Content" name="Content">
       <h1>Bienvenido a Estoy Bien PR!</h1>
-
+      <p><img src="logo.png" alt="Logo"></p>
       <p>El propósito de esta página es poder ayudar a los puertorriqueños (dentro y fuera de la isla) a identificar el estatus de sus familiares y amigos en Puerto Rico.</p>
     </div>
 
