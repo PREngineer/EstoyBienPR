@@ -193,6 +193,9 @@ function search_count($buscar, $valor)
             }
 
             echo '
+            <!-- Table -->
+            <table class="table table-hover">
+
             <div class="table-responsive">
             <div class="panel panel-default">
               <!-- Default panel contents -->
@@ -201,8 +204,6 @@ function search_count($buscar, $valor)
                 <p>Los resultados estan ordenados por pueblo y luego por nombre.</p>
               </div>
 
-              <!-- Table -->
-              <table class="table table-hover">
                 <thead>
                   <tr>
                     <th>Número de Récord</th>
@@ -264,10 +265,12 @@ function search_count($buscar, $valor)
 
           ?>
 
-        </table>
-      </div>
-      </div>
+
+        </div>
+        </div>
+      </table>
     </div>
+
 
 <!-- ******************* Footer Section ******************* -->
     <div class="container">
