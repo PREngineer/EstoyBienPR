@@ -56,7 +56,7 @@ function count_all()
   mysql_query("SET NAMES 'utf8'");
 
   // The query
-  $query = mysql_query("SELECT COUNT(`nombre`) from `personas`");
+  $query = mysql_query("SELECT COUNT(`nombre`) FROM `personas`");
 
   // Returns the number (row #0 since it will only be one result in the query)
   return mysql_result($query, 0);
@@ -75,7 +75,7 @@ function search_count($buscar, $valor)
   mysql_query("SET NAMES 'utf8'");
 
   // The query
-  $query = mysql_query("SELECT COUNT(`nombre`) from `personas` WHERE `" . $buscar . "` LIKE '%" . $valor . "%'");
+  $query = mysql_query("SELECT COUNT(`nombre`) FROM `personas` WHERE `" . $buscar . "` LIKE '%" . $valor . "%'");
 
   // Returns the number
   return mysql_result($query, 0);
@@ -154,7 +154,7 @@ function search_count($buscar, $valor)
       Buscar por:
       <form method="POST">
         <select name="buscar" size="1">
-            <option value="TODO"    <?php if($_POST['buscar'] == 'TODO')         { echo ' selected = "selected"';} ?>>TODO/option>
+            <option value="TODO"    <?php if($_POST['buscar'] == 'TODO')     { echo ' selected = "selected"';} ?>>TODO/option>
             <option value="nombre"  <?php if($_POST['buscar'] == 'nombre')   { echo ' selected = "selected"';} ?>>Nombre</option>
             <option value="edad"    <?php if($_POST['buscar'] == 'edad')     { echo ' selected = "selected"';} ?>>Edad</option>
             <option value="pueblo"  <?php if($_POST['buscar'] == 'pueblo')   { echo ' selected = "selected"';} ?>>Pueblo</option>
@@ -177,21 +177,21 @@ function search_count($buscar, $valor)
         <table class="table">
           <thead>
             <tr>
-            <th>Número de Récord</th>
-            <th>Nombre</th>
-            <th>Edad</th>
-            <th>Pueblo</th>
-            <th>Zip Code</th>
-            <th>Salud</th>
-            <th>Propiedad</th>
-            <th>Comida</th>
-            <th>Agua</th>
-            <th>Electricidad</th>
-            <th>Comunicación</th>
-            <th>Contacto</th>
-            <th>Otro</th>
-            <th>Fecha de Informe</th>
-            <tr>
+              <th>Número de Récord</th>
+              <th>Nombre</th>
+              <th>Edad</th>
+              <th>Pueblo</th>
+              <th>Zip Code</th>
+              <th>Salud</th>
+              <th>Propiedad</th>
+              <th>Comida</th>
+              <th>Agua</th>
+              <th>Electricidad</th>
+              <th>Comunicación</th>
+              <th>Contacto</th>
+              <th>Otro</th>
+              <th>Fecha de Informe</th>
+          </tr>
           </thead>
 
           <?php
@@ -199,7 +199,7 @@ function search_count($buscar, $valor)
             if( empty($_POST) === true || $_POST['buscar'] == "TODO" )
             { // Display by name
               $result = display_all();
-              $num    = count_all($string);
+              $num    = count_all();
               echo $num . " resultado(s).<br>";
             }
             // If page has posted
@@ -210,8 +210,8 @@ function search_count($buscar, $valor)
               {
                 // Display the results of the search
                 $string = mysql_real_escape_string($_POST['valor']);
-                $result = search($string);
-                $num    = search_count($string);
+                $result = search($_POST['buscar'], $string);
+                $num    = search_count($_POST['buscar'], $string);
                 // Show the results message
                 echo $num . " resultado(s) para su busqueda: '" . $string ."' <br>";
               }
