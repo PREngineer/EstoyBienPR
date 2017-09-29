@@ -154,7 +154,7 @@
 
       <p>Por favor provea la siguiente información.</p>
 
-      <form>
+      <form method="POST">
         <div class="form-group">
           <label for="nombre">Nombre: *</label>
           <input type="text" class="form-control" name="nombre" placeholder="Nombre Segundo Apellido Apellido" value="<?php print_r($_POST['nombre']); ?>">
