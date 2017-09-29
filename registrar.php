@@ -157,12 +157,12 @@
       <form method="POST">
         <div class="form-group">
           <label for="nombre">Nombre: *</label>
-          <input type="text" class="form-control" name="nombres" placeholder="Nombre Segundo Apellido Apellido">
+          <input type="text" class="form-control" name="nombres" placeholder="Nombre Segundo Apellido Apellido" value="<?php print_r($_POST['nombre']); ?>">
         </div>
 
         <div class="form-group">
           <label for="edad">Edad:</label>
-          <input type="text" class="form-control" name="edad" placeholder="18">
+          <input type="text" class="form-control" name="edad" placeholder="18" value="<?php print_r($_POST['edad']); ?>">
         </div>
 
         <div class="form-group">
@@ -252,7 +252,7 @@
 
         <div class="form-group">
           <label for="zip">Zip: *</label>
-          <input type="text" class="form-control" name="zip" placeholder="00000">
+          <input type="text" class="form-control" name="zip" placeholder="00000" value="<?php print_r($_POST['zip']); ?>">
         </div>
 
         <div class="form-group">
@@ -321,12 +321,12 @@
 
         <div class="form-group">
           <label for="contacto">Contacto:</label>
-          <input type="text" class="form-control" name="contacto" placeholder="nombre@email.com o 000-000-0000">
+          <input type="text" class="form-control" name="contacto" placeholder="nombre@email.com o 000-000-0000" value="<?php print_r($_POST['contacto']); ?>">
         </div>
 
         <div class="form-group">
           <label for="otro">Otro:</label>
-          <textarea type="text" class="form-control" rows="5" name="otro">Aqui puede poner otra información que quiere que sus familiares sepan como donde encontrarlo, etc.</textarea>
+          <textarea type="text" class="form-control" rows="5" name="otro" value="<?php print_r($_POST['otro']); ?>">Aqui puede poner otra información que quiere que sus familiares sepan como donde encontrarlo, etc.</textarea>
         </div>
 
         <button type="submit" class="btn btn-default">Someter</button>
