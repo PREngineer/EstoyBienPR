@@ -205,11 +205,11 @@ function search_count($buscar, $valor)
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>Número de Récord</th>
+              <th>Récord</th>
               <th>Nombre</th>
               <th>Edad</th>
               <th>Pueblo</th>
-              <th>Zip Code</th>
+              <th>Zip</th>
               <th>Salud</th>
               <th>Propiedad</th>
               <th>Comida</th>
@@ -218,7 +218,7 @@ function search_count($buscar, $valor)
               <th>Comunicación</th>
               <th>Contacto</th>
               <th>Otro</th>
-              <th>Fecha de Informe</th>
+              <th>Informado</th>
             </tr>
           </thead>
 
