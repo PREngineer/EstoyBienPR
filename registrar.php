@@ -110,6 +110,7 @@
           mysql_query("SET NAMES 'utf8'");
 
           $nombre       = $POST['nombre'];
+          $edad         = $POST['edad'];
           $pueblo       = $POST['pueblo'];
           $zip          = $POST['zip'];
           $salud        = $POST['salud'];
@@ -123,10 +124,10 @@
 
     			// Actual MySQL Query that Updates the information
     			mysql_query("INSERT INTO `personas`
-                        (`nombre`, `pueblo`, `zip`, `salud`, `propiedad`, `comida`,
+                        (`nombre`, `edad`, `pueblo`, `zip`, `salud`, `propiedad`, `comida`,
                         `agua`, `elec`, `comunicacion`, `contacto`, `otro`)
-                        VALUES ('$nombre', '$pueblo', '$zip', '$salud', '$propiedad', '$comida',
-                        '$agua', '$elec', '$comunicacion', '$contacto', '$otro') ";
+                        VALUES ('$nombre', '$edad', '$pueblo', '$zip', '$salud', '$propiedad', '$comida',
+                        '$agua', '$elec', '$comunicacion', '$contacto', '$otro')";
 
           // Enable Success Message
           $success = true;
