@@ -60,7 +60,7 @@
     <!-- ******************* Actual Content Section ******************* -->
     <div class="container" id="Content" name="Content">
       <p><img src="logo.png" width="300" height="300"alt="Logo"></p>
-      <p>El propósito de esta página es poder ayudar a los puertorriqueños (dentro y fuera de la isla) a identificar el estatus de sus familiares y amigos en Puerto Rico.</p>
+      <p>El propósito de esta aplicación es poder ayudar a los puertorriqueños (dentro y fuera de la isla) a identificar el estatus de sus familiares y amigos en Puerto Rico.</p>
     </div>
 
     <!-- ******************* Footer Section ******************* -->
