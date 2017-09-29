@@ -166,42 +166,13 @@ function search_count($buscar, $valor)
         <button type="submit" class="btn btn-default">Buscar</button>
       </form>
 
-      <div class="panel panel-default">
-        <!-- Default panel contents -->
-        <div class="panel-heading">Resultados</div>
-        <div class="panel-body">
-          <p>Aquí están los resultados para la búsqueda.</p>
-        </div>
-
-        <!-- Table -->
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Número de Récord</th>
-              <th>Nombre</th>
-              <th>Edad</th>
-              <th>Pueblo</th>
-              <th>Zip Code</th>
-              <th>Salud</th>
-              <th>Propiedad</th>
-              <th>Comida</th>
-              <th>Agua</th>
-              <th>Electricidad</th>
-              <th>Comunicación</th>
-              <th>Contacto</th>
-              <th>Otro</th>
-              <th>Fecha de Informe</th>
-          </tr>
-          </thead>
-
-          <?php
+      <?php
 
             // If page was just loaded (nothing was posted)
             if( empty($_POST) === true || $_POST['buscar'] == "TODO" )
             { // Display by name
               $result = display_all();
               $num    = count_all();
-              echo $num . " resultado(s).<br>";
             }
             // If page has posted
             else
@@ -213,15 +184,13 @@ function search_count($buscar, $valor)
                 $string = mysql_real_escape_string($_POST['valor']);
                 $result = search($_POST['buscar'], $string);
                 $num    = search_count($_POST['buscar'], $string);
-                // Show the results message
-                echo $num . " resultado(s) para su busqueda: '" . $string ."' <br>";
               }
-            }
-            else
-            {
-              echo '<div class="alert alert-danger alert-dismissible" role="alert">
-                    Debe especificar lo que busca.
-                    </div>';
+              else
+              {
+                echo '<div class="alert alert-danger alert-dismissible" role="alert">
+                      Debe especificar lo que busca.
+                      </div>';
+              }
             }
 
             $i = 0;
@@ -242,6 +211,34 @@ function search_count($buscar, $valor)
               $contacto     = mysql_result($result, $i, "");
               $otro         = mysql_result($result, $i, "");
               $timestamp    = mysql_result($result, $i, "");
+
+              echo '<div class="panel panel-default">
+                <!-- Default panel contents -->
+                <div class="panel-heading">' . $num . ' resultado(s)</div>
+                <div class="panel-body">
+                  <p>Los resultados estan ordenados por pueblo y luego por nombre.</p>
+                </div>
+
+                <!-- Table -->
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Número de Récord</th>
+                      <th>Nombre</th>
+                      <th>Edad</th>
+                      <th>Pueblo</th>
+                      <th>Zip Code</th>
+                      <th>Salud</th>
+                      <th>Propiedad</th>
+                      <th>Comida</th>
+                      <th>Agua</th>
+                      <th>Electricidad</th>
+                      <th>Comunicación</th>
+                      <th>Contacto</th>
+                      <th>Otro</th>
+                      <th>Fecha de Informe</th>
+                  </tr>
+                  </thead>';
 
               echo '
               <tr>
