@@ -302,9 +302,10 @@
         <div class="form-group">
           <label for="elec">Electricidad: *</label><br>
           <select name="elec" size="1">
-            <option value=""              <?php if($_POST[''] == '')            { echo ' selected = "selected"';} ?> >Escoja</option>
-            <option value="Sí"            <?php if($_POST['elec'] == 'Sí')      { echo ' selected = "selected"';} ?> >Sí</option>
-            <option value="No"            <?php if($_POST['elec'] == 'No')      { echo ' selected = "selected"';} ?> >No</option>
+            <option value=""              <?php if($_POST[''] == '')                { echo ' selected = "selected"';} ?> >Escoja</option>
+            <option value="Sí"            <?php if($_POST['elec'] == 'Sí')          { echo ' selected = "selected"';} ?> >Sí</option>
+            <option value="No"            <?php if($_POST['elec'] == 'No')          { echo ' selected = "selected"';} ?> >No</option>
+            <option value="Generador"     <?php if($_POST['elec'] == 'Generador')   { echo ' selected = "selected"';} ?> >Generador</option>
           </select>
         </div>
 
@@ -314,7 +315,7 @@
             <option value=""              <?php if($_POST[''] == '')                        { echo ' selected = "selected"';} ?> >Escoja</option>
             <option value="Sí"            <?php if($_POST['comunicacion'] == 'Sí')          { echo ' selected = "selected"';} ?> >Sí</option>
             <option value="No"            <?php if($_POST['comunicacion'] == 'No')          { echo ' selected = "selected"';} ?> >No</option>
-            <option value="Va Y Viene"    <?php if($_POST['comunicacion'] == 'Va Y Viene')  { echo ' selected = "selected"';} ?> >Va Y Viene</option>
+            <option value="Inestable"    <?php if($_POST['comunicacion'] == 'Inestable')  { echo ' selected = "selected"';} ?> >Inestable</option>
           </select>
         </div>
 
@@ -328,7 +329,7 @@
           <textarea class="form-control" name="otro" rows="5" placeholder="Aquí puede poner otra información que quiera que sus familiares sepan, como donde encontrarlo, etc."><?php print_r($_POST['otro']); ?></textarea>
         </div>
 
-        <button type="submit" class="btn btn-default">Someter</button>
+        <button type="submit" class="btn btn-default">Guardar</button>
       </form>
 
 
