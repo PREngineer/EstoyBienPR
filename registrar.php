@@ -98,7 +98,34 @@
             );
 
           // Create the NFPO entry in DB
-          //guardar($data);
+
+          //MySQL Connection Parameters
+          $error_message = 'Sorry, DB connection error.  Please refresh the page.';
+          mysql_connect('localhost', 'root', 'CagateEnTuMadre12!@') or die($error_message);
+
+          //Name of the Database to connect to
+          mysql_select_db(OKPR);
+
+          // Set the Charset
+          mysql_query("SET NAMES 'utf8'");
+
+          $nombre       = $POST['nombre'];
+          $pueblo       = $POST['pueblo'];
+          $zip          = $POST['zip'];
+          $salud        = $POST['salud'];
+          $propiedad    = $POST['propiedad'];
+          $comida       = $POST['comida'];
+          $agua         = $POST['agua'];
+          $elec         = $POST['elec'];
+          $comunicacion = $POST['comunicacion'];
+          $contacto     = $POST['contacto'];
+          $otro         = $POST['otro'];
+
+    			// Actual MySQL Query that Updates the information
+    			mysql_query("INSERT INTO `personas` SET  `nombre` = '$nombre', `pueblo` = '$pueblo',
+                        `zip` = '$zip', `salud` = '$salud', `propiedad` = '$propiedad', `comida` = '$comida',
+                        `agua` = '$agua', `elec` = '$elec', `comunicacion` = '$comunicacion',
+                        `contacto` = '$contacto', `otro` = '$otro'");
 
           // Enable Success Message
           $success = true;
@@ -285,9 +312,10 @@
         <div class="form-group">
           <label for="comunicacion">Comunicación Celular: *</label><br>
           <select name="comunicacion" size="1">
-            <option value=""              <?php if($_POST[''] == '')                    { echo ' selected = "selected"';} ?> >Escoja</option>
-            <option value="Sí"            <?php if($_POST['comunicacion'] == 'Sí')      { echo ' selected = "selected"';} ?> >Sí</option>
-            <option value="No"            <?php if($_POST['comunicacion'] == 'No')      { echo ' selected = "selected"';} ?> >No</option>
+            <option value=""              <?php if($_POST[''] == '')                        { echo ' selected = "selected"';} ?> >Escoja</option>
+            <option value="Sí"            <?php if($_POST['comunicacion'] == 'Sí')          { echo ' selected = "selected"';} ?> >Sí</option>
+            <option value="No"            <?php if($_POST['comunicacion'] == 'No')          { echo ' selected = "selected"';} ?> >No</option>
+            <option value="Va Y Viene"    <?php if($_POST['comunicacion'] == 'Va Y Viene')  { echo ' selected = "selected"';} ?> >Va Y Viene</option>
           </select>
         </div>
 
