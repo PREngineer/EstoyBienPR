@@ -139,7 +139,7 @@
         </div>
 
         <div class="form-group">
-          <label for="pueblo">Pueblo: *</label>
+          <label for="pueblo">Pueblo: *</label><br>
           <select name="pueblo" size="1">
             <option value=""              <?php if($_POST['pueblo'] == '')              { echo ' selected = "selected"';} ?> >Escoja</option>
             <option value="Adjuntas"      <?php if($_POST['pueblo'] == 'Adjuntas')      { echo ' selected = "selected"';} ?> >Adjuntas</option>
@@ -229,7 +229,7 @@
         </div>
 
         <div class="form-group">
-          <label for="salud">Salud: *</label>
+          <label for="salud">Salud: *</label><br>
           <select name="salud" size="1">
             <option value=""              <?php if($_POST['salud'] == '')               { echo ' selected = "selected"';} ?> >Escoja</option>
             <option value="Bien"          <?php if($_POST['salud'] == 'Bien')           { echo ' selected = "selected"';} ?> >Bien</option>
@@ -241,7 +241,7 @@
         </div>
 
         <div class="form-group">
-          <label for="propiedad">Propiedad: *</label>
+          <label for="propiedad">Propiedad: *</label><br>
           <select name="propiedad" size="1">
             <option value=""              <?php if($_POST['propiedad'] == '')               { echo ' selected = "selected"';} ?> >Escoja</option>
             <option value="Bien"          <?php if($_POST['propiedad'] == 'Bien')           { echo ' selected = "selected"';} ?> >Bien</option>
@@ -252,7 +252,7 @@
         </div>
 
         <div class="form-group">
-          <label for="comida">Comida: *</label>
+          <label for="comida">Comida: *</label><br>
           <select name="comida" size="1">
             <option value=""              <?php if($_POST['comida'] == '')              { echo ' selected = "selected"';} ?> >Escoja</option>
             <option value="Nada"          <?php if($_POST['comida'] == 'Nada')          { echo ' selected = "selected"';} ?> >Nada</option>
@@ -263,7 +263,7 @@
         </div>
 
         <div class="form-group">
-          <label for="agua">Agua: *</label>
+          <label for="agua">Agua: *</label><br>
           <select name="agua" size="1">
             <option value=""              <?php if($_POST['agua'] == '')              { echo ' selected = "selected"';} ?> >Escoja</option>
             <option value="Nada"          <?php if($_POST['agua'] == 'Nada')          { echo ' selected = "selected"';} ?> >Nada</option>
@@ -274,7 +274,7 @@
         </div>
 
         <div class="form-group">
-          <label for="elec">Electricidad: *</label>
+          <label for="elec">Electricidad: *</label><br>
           <select name="elec" size="1">
             <option value=""              <?php if($_POST[''] == '')            { echo ' selected = "selected"';} ?> >Escoja</option>
             <option value="Sí"            <?php if($_POST['elec'] == 'Sí')      { echo ' selected = "selected"';} ?> >Sí</option>
@@ -283,7 +283,7 @@
         </div>
 
         <div class="form-group">
-          <label for="comunicacion">Comunicación Celular: *</label>
+          <label for="comunicacion">Comunicación Celular: *</label><br>
           <select name="comunicacion" size="1">
             <option value=""              <?php if($_POST[''] == '')                    { echo ' selected = "selected"';} ?> >Escoja</option>
             <option value="Sí"            <?php if($_POST['comunicacion'] == 'Sí')      { echo ' selected = "selected"';} ?> >Sí</option>
