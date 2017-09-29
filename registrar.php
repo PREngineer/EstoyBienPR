@@ -130,12 +130,12 @@
       <form method="POST">
         <div class="form-group">
           <label for="nombre">Nombre: *</label>
-          <input type="text" class="form-control" name="nombres">
+          <input type="text" class="form-control" name="nombres" placeholder="Nombre Segundo Apellido Apellido">
         </div>
 
         <div class="form-group">
           <label for="edad">Edad:</label>
-          <input type="text" class="form-control" name="edad">
+          <input type="text" class="form-control" name="edad" placeholder="18">
         </div>
 
         <div class="form-group">
@@ -225,7 +225,7 @@
 
         <div class="form-group">
           <label for="zip">Zip: *</label>
-          <input type="text" class="form-control" name="zip">
+          <input type="text" class="form-control" name="zip" placeholder="00000">
         </div>
 
         <div class="form-group">
@@ -293,12 +293,12 @@
 
         <div class="form-group">
           <label for="contacto">Contacto:</label>
-          <input type="text" class="form-control" name="contacto">
+          <input type="text" class="form-control" name="contacto" placeholder="nombre@email.com o 000-000-0000">
         </div>
 
         <div class="form-group">
           <label for="otro">Otro:</label>
-          <textarea type="text" class="form-control" rows="5" name="otro">Detalles</textarea>
+          <textarea type="text" class="form-control" rows="5" name="otro">Aqui puede poner otra información que quiere que sus familiares sepan como donde encontrarlo, etc.</textarea>
         </div>
 
         <button type="submit" class="btn btn-default">Someter</button>
