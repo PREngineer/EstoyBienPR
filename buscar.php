@@ -154,7 +154,7 @@ function search_count($buscar, $valor)
       Buscar por:
       <form method="POST">
         <select name="buscar" size="1">
-            <option value="TODO"    <?php if($_POST['buscar'] == 'TODO')     { echo ' selected = "selected"';} ?>>TODO/option>
+            <option value="TODO"    <?php if($_POST['buscar'] == 'TODO')     { echo ' selected = "selected"';} ?>>TODO</option>
             <option value="nombre"  <?php if($_POST['buscar'] == 'nombre')   { echo ' selected = "selected"';} ?>>Nombre</option>
             <option value="edad"    <?php if($_POST['buscar'] == 'edad')     { echo ' selected = "selected"';} ?>>Edad</option>
             <option value="pueblo"  <?php if($_POST['buscar'] == 'pueblo')   { echo ' selected = "selected"';} ?>>Pueblo</option>
