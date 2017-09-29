@@ -59,7 +59,7 @@
 
     <!-- ******************* Actual Content Section ******************* -->
     <div class="container" id="Content" name="Content">
-      <p><img src="logo.png" width="300" height="300"alt="Logo"></p>
+      <p><img src="logo.png" class="img-responsive center-block" width="300" height="300"alt="Logo"></p>
       <p>El propósito de esta aplicación es poder ayudar a los puertorriqueños (dentro y fuera de la isla) a identificar el estatus de sus familiares y amigos en Puerto Rico.</p>
       <p>Si no sabes nada de tu familiar, busca en la lista de personas registradas para ver si se sabe algo de el/ella.</p>
       <p>Puedes filtrar por Nombre, Pueblo, Edad, y Zip Code.</p>
