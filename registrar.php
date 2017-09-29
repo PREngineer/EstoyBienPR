@@ -147,6 +147,8 @@
 
       <h1>Registrar persona</h1>
 
+      <p>Por favor, recuerde que la información que usted provee será visible al público.  El creador de la aplicación no se hace responsable del uso de la misma y la información aquí disponible.</p>
+
       <p>Por favor provea la siguiente información.</p>
 
       <form method="POST">
@@ -267,8 +269,8 @@
           <select name="propiedad" size="1">
             <option value=""              <?php if($_POST['propiedad'] == '')               { echo ' selected = "selected"';} ?> >Escoja</option>
             <option value="Bien"          <?php if($_POST['propiedad'] == 'Bien')           { echo ' selected = "selected"';} ?> >Bien</option>
-            <option value="Danos Menores" <?php if($_POST['propiedad'] == 'Daños Menores')  { echo ' selected = "selected"';} ?> >Daños Menores</option>
-            <option value="Danos Mayores" <?php if($_POST['propiedad'] == 'Daños Mayores')  { echo ' selected = "selected"';} ?> >Daños Mayores</option>
+            <option value="Daños Menores" <?php if($_POST['propiedad'] == 'Daños Menores')  { echo ' selected = "selected"';} ?> >Daños Menores</option>
+            <option value="Daños Mayores" <?php if($_POST['propiedad'] == 'Daños Mayores')  { echo ' selected = "selected"';} ?> >Daños Mayores</option>
             <option value="Perdida Total" <?php if($_POST['propiedad'] == 'Pérdida Total')  { echo ' selected = "selected"';} ?> >Pérdida Total</option>
           </select>
         </div>
