@@ -2,6 +2,16 @@
 
 function display_all()
 {
+  //MySQL Connection Parameters
+  $error_message = 'Sorry, DB connection error.  Please refresh the page.';
+  mysql_connect('localhost', 'root', 'CagateEnTuMadre12!@') or die($error_message);
+
+  //Name of the Database to connect to
+  mysql_select_db(OKPR);
+
+  // Set the Charset
+  mysql_query("SET NAMES 'utf8'");
+
   // The query
   $query = mysql_query("SELECT *
                         FROM `personas`
@@ -13,10 +23,20 @@ function display_all()
 
 function search($buscar, $valor)
 {
+  //MySQL Connection Parameters
+  $error_message = 'Sorry, DB connection error.  Please refresh the page.';
+  mysql_connect('localhost', 'root', 'CagateEnTuMadre12!@') or die($error_message);
+
+  //Name of the Database to connect to
+  mysql_select_db(OKPR);
+
+  // Set the Charset
+  mysql_query("SET NAMES 'utf8'");
+
   // Get the information from DB
   $query = "SELECT *
             FROM `personas`
-            WHERE `$buscar` LIKE '%" . $valor . "%'
+            WHERE `" . $buscar . "` LIKE '%" . $valor . "%'
             ORDER BY `pueblo` ASC, `nombre`";
 
   // Return it
@@ -25,6 +45,16 @@ function search($buscar, $valor)
 
 function count_all()
 {
+  //MySQL Connection Parameters
+  $error_message = 'Sorry, DB connection error.  Please refresh the page.';
+  mysql_connect('localhost', 'root', 'CagateEnTuMadre12!@') or die($error_message);
+
+  //Name of the Database to connect to
+  mysql_select_db(OKPR);
+
+  // Set the Charset
+  mysql_query("SET NAMES 'utf8'");
+
   // The query
   $query = mysql_query("SELECT COUNT(`nombre`) from `personas`");
 
@@ -34,8 +64,18 @@ function count_all()
 
 function search_count($buscar, $valor)
 {
+  //MySQL Connection Parameters
+  $error_message = 'Sorry, DB connection error.  Please refresh the page.';
+  mysql_connect('localhost', 'root', 'CagateEnTuMadre12!@') or die($error_message);
+
+  //Name of the Database to connect to
+  mysql_select_db(OKPR);
+
+  // Set the Charset
+  mysql_query("SET NAMES 'utf8'");
+
   // The query
-  $query = mysql_query("SELECT COUNT(`nombre`) from `personas` WHERE `$buscar` LIKE '%" . $valor . "%'");
+  $query = mysql_query("SELECT COUNT(`nombre`) from `personas` WHERE `" . $buscar . "` LIKE '%" . $valor . "%'");
 
   // Returns the number
   return mysql_result($query, 0);
