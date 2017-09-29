@@ -18,7 +18,7 @@ function display_all()
                         ORDER BY `pueblo` ASC, `nombre`");
 
   // Returns all
-  return mysql_query($query);
+  return $query;
 }
 
 function search($buscar, $valor)
@@ -34,13 +34,13 @@ function search($buscar, $valor)
   mysql_query("SET NAMES 'utf8'");
 
   // Get the information from DB
-  $query = "SELECT *
+  $query = mysql_query("SELECT *
             FROM `personas`
             WHERE `" . $buscar . "` LIKE '%" . $valor . "%'
-            ORDER BY `pueblo` ASC, `nombre`";
+            ORDER BY `pueblo` ASC, `nombre`");
 
   // Return it
-  return mysql_query($query);
+  return $query;
 }
 
 function count_all()
