@@ -201,7 +201,7 @@ function search_count($buscar, $valor)
               </div>
 
               <!-- Table -->
-              <table class="table">
+              <table class="table table-responsive">
                 <thead>
                   <tr>
                     <th>Número de Récord</th>
