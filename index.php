@@ -23,17 +23,6 @@
 
   <body>
 
-    <!-- ******************* NavBar Handler Section ******************* -->
-    <script>
-    $(document).ready(function(){
-        $("a").click(function(){
-          var url = $(this).attr("link");
-          //window.alert(url.substr(url.lastIndexOf('/') + 1));
-          $("#Content").load(url);
-        });
-    });
-    </script>
-
     <!-- ******************* NavBar Section ******************* -->
     <div class="container">
       <nav class="navbar navbar-inverse">
@@ -57,10 +46,10 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
               <li class="active">
-                <a link="buscar.php" style="cursor: pointer;">Buscar</a>
+                <a href="buscar.php" style="cursor: pointer;">Buscar</a>
               </li>
               <li>
-                <a link="registrar.php" style="cursor: pointer;">Registrar</a>
+                <a href="registrar.php" style="cursor: pointer;">Registrar</a>
               </li>
             </ul>
           </div><!-- /.navbar-collapse -->
