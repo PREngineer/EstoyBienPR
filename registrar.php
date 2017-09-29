@@ -122,10 +122,11 @@
           $otro         = $POST['otro'];
 
     			// Actual MySQL Query that Updates the information
-    			mysql_query("INSERT INTO `personas` SET  `nombre` = '$nombre', `pueblo` = '$pueblo',
-                        `zip` = '$zip', `salud` = '$salud', `propiedad` = '$propiedad', `comida` = '$comida',
-                        `agua` = '$agua', `elec` = '$elec', `comunicacion` = '$comunicacion',
-                        `contacto` = '$contacto', `otro` = '$otro'");
+    			mysql_query("INSERT INTO `personas`
+                        (`nombre`, `pueblo`, `zip`, `salud`, `propiedad`, `comida`,
+                        `agua`, `elec`, `comunicacion`, `contacto`, `otro`)
+                        VALUES ('$nombre', '$pueblo', '$zip', '$salud', '$propiedad', '$comida',
+                        '$agua', '$elec', '$comunicacion', '$contacto', '$otro') ";
 
           // Enable Success Message
           $success = true;
