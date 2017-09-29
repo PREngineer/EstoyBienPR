@@ -198,11 +198,7 @@ function search_count($buscar, $valor)
 
         <!-- Default panel contents -->
         <div class="panel-heading">
-        <?php echo $num;?> resultado(s)
-        </div>
-
-        <div class="panel-body">
-          <p>Los resultados estan ordenados por pueblo y luego por nombre.</p>
+        <?php echo $num;?> resultado(s).  Los resultados estan ordenados por pueblo y luego por nombre.
         </div>
 
         <!-- Table -->
