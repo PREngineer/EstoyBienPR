@@ -157,7 +157,7 @@
       <form method="POST">
         <div class="form-group">
           <label for="nombre">Nombre: *</label>
-          <input type="text" class="form-control" name="nombres" placeholder="Nombre Segundo Apellido Apellido" value="<?php print_r($_POST['nombre']); ?>">
+          <input type="text" class="form-control" name="nombre" placeholder="Nombre Segundo Apellido Apellido" value="<?php print_r($_POST['nombre']); ?>">
         </div>
 
         <div class="form-group">
