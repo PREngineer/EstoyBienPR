@@ -45,10 +45,10 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-              <li class="active">
+              <li>
                 <a href="buscar.php" style="cursor: pointer;">Buscar</a>
               </li>
-              <li>
+              <li class="active">
                 <a href="registrar.php" style="cursor: pointer;">Registrar</a>
               </li>
             </ul>
@@ -122,7 +122,7 @@
 
       ?>
 
-      
+
       <h1>Registrar persona</h1>
 
       <p>Por favor provea la siguiente información.</p>
