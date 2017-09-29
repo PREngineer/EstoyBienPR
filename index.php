@@ -59,7 +59,6 @@
 
     <!-- ******************* Actual Content Section ******************* -->
     <div class="container" id="Content" name="Content">
-      <h1>Estoy Bien PR!</h1>
       <p><img src="logo.png" width="300" height="300"alt="Logo"></p>
       <p>El propósito de esta página es poder ayudar a los puertorriqueños (dentro y fuera de la isla) a identificar el estatus de sus familiares y amigos en Puerto Rico.</p>
     </div>
