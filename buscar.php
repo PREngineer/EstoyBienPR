@@ -193,6 +193,35 @@ function search_count($buscar, $valor)
               }
             }
 
+            echo '
+            <div class="panel panel-default">
+              <!-- Default panel contents -->
+              <div class="panel-heading">' . $num . ' resultado(s)</div>
+              <div class="panel-body">
+                <p>Los resultados estan ordenados por pueblo y luego por nombre.</p>
+              </div>
+
+              <!-- Table -->
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Número de Récord</th>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Pueblo</th>
+                    <th>Zip Code</th>
+                    <th>Salud</th>
+                    <th>Propiedad</th>
+                    <th>Comida</th>
+                    <th>Agua</th>
+                    <th>Electricidad</th>
+                    <th>Comunicación</th>
+                    <th>Contacto</th>
+                    <th>Otro</th>
+                    <th>Fecha de Informe</th>
+                </tr>
+                </thead>';
+
             $i = 0;
             // Go over every result and display on the table.
             while ($i < $num)
@@ -211,34 +240,6 @@ function search_count($buscar, $valor)
               $contacto     = mysql_result($result, $i, "");
               $otro         = mysql_result($result, $i, "");
               $timestamp    = mysql_result($result, $i, "");
-
-              echo '<div class="panel panel-default">
-                <!-- Default panel contents -->
-                <div class="panel-heading">' . $num . ' resultado(s)</div>
-                <div class="panel-body">
-                  <p>Los resultados estan ordenados por pueblo y luego por nombre.</p>
-                </div>
-
-                <!-- Table -->
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th>Número de Récord</th>
-                      <th>Nombre</th>
-                      <th>Edad</th>
-                      <th>Pueblo</th>
-                      <th>Zip Code</th>
-                      <th>Salud</th>
-                      <th>Propiedad</th>
-                      <th>Comida</th>
-                      <th>Agua</th>
-                      <th>Electricidad</th>
-                      <th>Comunicación</th>
-                      <th>Contacto</th>
-                      <th>Otro</th>
-                      <th>Fecha de Informe</th>
-                  </tr>
-                  </thead>';
 
               echo '
               <tr>
