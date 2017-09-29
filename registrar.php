@@ -154,7 +154,7 @@
 
       <p>Por favor provea la siguiente información.</p>
 
-      <form method="POST">
+      <form>
         <div class="form-group">
           <label for="nombre">Nombre: *</label>
           <input type="text" class="form-control" name="nombre" placeholder="Nombre Segundo Apellido Apellido" value="<?php print_r($_POST['nombre']); ?>">
@@ -326,7 +326,7 @@
 
         <div class="form-group">
           <label for="otro">Otro:</label>
-          <textarea class="form-control" name="otro" rows="5" placeholder="Aqui puede poner otra información que quiere que sus familiares sepan como donde encontrarlo, etc."><?php print_r($_POST['otro']); ?></textarea>
+          <textarea class="form-control" name="otro" rows="5" placeholder="Aquí puede poner otra información que quiera que sus familiares sepan, como donde encontrarlo, etc."><?php print_r($_POST['otro']); ?></textarea>
         </div>
 
         <button type="submit" class="btn btn-default">Someter</button>
