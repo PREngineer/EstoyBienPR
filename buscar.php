@@ -227,24 +227,39 @@ function search_count($buscar, $valor)
 
             $i = 0;
             // Go over every result and display on the table.
-            while( $row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC) )
+            while ($i < $num)
             {
+              // Get everything for the Campaign
+              $nombre       = mysql_result($result, $i, "nombre");
+              $edad         = mysql_result($result, $i, "edad");
+              $pueblo       = mysql_result($result, $i, "pueblo");
+              $zip          = mysql_result($result, $i, "zip");
+              $salud        = mysql_result($result, $i, "salud");
+              $propiedad    = mysql_result($result, $i, "propiedad");
+              $comida       = mysql_result($result, $i, "comida");
+              $agua         = mysql_result($result, $i, "agua");
+              $electricidad = mysql_result($result, $i, "elec");
+              $comunicacion = mysql_result($result, $i, "comunicacion");
+              $contacto     = mysql_result($result, $i, "contacto");
+              $otro         = mysql_result($result, $i, "otro");
+              $timestamp    = mysql_result($result, $i, "timestamp");
+
               echo '
               <tr>
                 <td>' . ($i+1) .'</td>
-                <td>' . $row["nombre"] .'</td>
-                <td>' . $row["edad"].'</td>
-                <td>' . $row["pueblo"] .'</td>
-                <td>' . $row["zip"] .'</td>
-                <td>' . $row["salud"] .'</td>
-                <td>' . $row["propiedad"] .'</td>
-                <td>' . $row["comida"] .'</td>
-                <td>' . $row["agua"] .'</td>
-                <td>' . $row["elec"] .'</td>
-                <td>' . $row["comunicacion"] .'</td>
-                <td>' . $row["contacto"] .'</td>
-                <td>' . $row["otro"] .'</td>
-                <td>' . $row["timestamp"] .'</td>
+                <td>' . $nombre .'</td>
+                <td>' . $edad .'</td>
+                <td>' . $pueblo .'</td>
+                <td>' . $zip .'</td>
+                <td>' . $salud .'</td>
+                <td>' . $propiedad .'</td>
+                <td>' . $comida .'</td>
+                <td>' . $agua .'</td>
+                <td>' . $electricidad .'</td>
+                <td>' . $comunicacion .'</td>
+                <td>' . $contacto .'</td>
+                <td>' . $otro .'</td>
+                <td>' . $timestamp .'</td>
               </tr>';
 
               $i++;
