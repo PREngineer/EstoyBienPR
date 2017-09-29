@@ -18,7 +18,7 @@ function display_all()
                         ORDER BY `pueblo` ASC, `nombre`");
 
   // Returns all
-  return mysql_fetch_assoc($query);
+  return $query;
 }
 
 function search($buscar, $valor)
@@ -40,7 +40,7 @@ function search($buscar, $valor)
             ORDER BY `pueblo` ASC, `nombre`";
 
   // Return it
-  return mysql_fetch_assoc($query);
+  return $query;
 }
 
 function count_all()
@@ -227,39 +227,24 @@ function search_count($buscar, $valor)
 
             $i = 0;
             // Go over every result and display on the table.
-            while ($i < $num)
+            while( $row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC) )
             {
-              // Get everything for the Campaign
-              $nombre       = mysql_result($result, $i, "");
-              $edad         = mysql_result($result, $i, "");
-              $pueblo       = mysql_result($result, $i, "");
-              $zip          = mysql_result($result, $i, "");
-              $salud        = mysql_result($result, $i, "");
-              $propiedad    = mysql_result($result, $i, "");
-              $comida       = mysql_result($result, $i, "");
-              $agua         = mysql_result($result, $i, "");
-              $electricidad = mysql_result($result, $i, "");
-              $comunicacion = mysql_result($result, $i, "");
-              $contacto     = mysql_result($result, $i, "");
-              $otro         = mysql_result($result, $i, "");
-              $timestamp    = mysql_result($result, $i, "");
-
               echo '
               <tr>
                 <td>' . ($i+1) .'</td>
-                <td>' . $nombre .'</td>
-                <td>' . $edad .'</td>
-                <td>' . $pueblo .'</td>
-                <td>' . $zip .'</td>
-                <td>' . $salud .'</td>
-                <td>' . $propiedad .'</td>
-                <td>' . $comida .'</td>
-                <td>' . $agua .'</td>
-                <td>' . $electricidad .'</td>
-                <td>' . $comunicacion .'</td>
-                <td>' . $contacto .'</td>
-                <td>' . $otro .'</td>
-                <td>' . $timestamp .'</td>
+                <td>' . $row["nombre"] .'</td>
+                <td>' . $row["edad"].'</td>
+                <td>' . $row["pueblo"] .'</td>
+                <td>' . $row["zip"] .'</td>
+                <td>' . $row["salud"] .'</td>
+                <td>' . $row["propiedad"] .'</td>
+                <td>' . $row["comida"] .'</td>
+                <td>' . $row["agua"] .'</td>
+                <td>' . $row["elec"] .'</td>
+                <td>' . $row["comunicacion"] .'</td>
+                <td>' . $row["contacto"] .'</td>
+                <td>' . $row["otro"] .'</td>
+                <td>' . $row["timestamp"] .'</td>
               </tr>';
 
               $i++;
