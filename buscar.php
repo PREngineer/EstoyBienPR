@@ -18,7 +18,7 @@ function display_all()
                         ORDER BY `pueblo` ASC, `nombre`");
 
   // Returns all
-  return $query;
+  return mysql_fetch_assoc($query);
 }
 
 function search($buscar, $valor)
@@ -40,7 +40,7 @@ function search($buscar, $valor)
             ORDER BY `pueblo` ASC, `nombre`";
 
   // Return it
-  return $query;
+  return mysql_fetch_assoc($query);
 }
 
 function count_all()
