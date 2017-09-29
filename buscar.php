@@ -195,7 +195,7 @@ function search_count($buscar, $valor)
           </thead>
 
           <?php
-/*
+
             // If page was just loaded (nothing was posted)
             if( empty($_POST) === true || $_POST['buscar'] == "TODO" )
             { // Display by name
@@ -263,7 +263,7 @@ function search_count($buscar, $valor)
 
               $i++;
             }
-*/
+
           ?>
 
         </table>
