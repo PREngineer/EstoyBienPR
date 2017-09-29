@@ -315,13 +315,13 @@
             <option value=""              <?php if($_POST[''] == '')                        { echo ' selected = "selected"';} ?> >Escoja</option>
             <option value="Sí"            <?php if($_POST['comunicacion'] == 'Sí')          { echo ' selected = "selected"';} ?> >Sí</option>
             <option value="No"            <?php if($_POST['comunicacion'] == 'No')          { echo ' selected = "selected"';} ?> >No</option>
-            <option value="Inestable"    <?php if($_POST['comunicacion'] == 'Inestable')  { echo ' selected = "selected"';} ?> >Inestable</option>
+            <option value="Inestable"     <?php if($_POST['comunicacion'] == 'Inestable')  { echo ' selected = "selected"';} ?> >Inestable</option>
           </select>
         </div>
 
         <div class="form-group">
           <label for="contacto">Contacto:</label>
-          <input type="text" class="form-control" name="contacto" placeholder="nombre@email.com o 000-000-0000" value="<?php print_r($_POST['contacto']); ?>">
+          <input type="text" class="form-control" name="contacto" placeholder="nombre@email.com, 000-000-0000, En X sitio" value="<?php print_r($_POST['contacto']); ?>">
         </div>
 
         <div class="form-group">
