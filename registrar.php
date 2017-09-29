@@ -118,7 +118,7 @@
         </div>
         <div class="form-group">
           <label for="otro">Otro:</label>
-          <input type="text" class="form-control" id="otro">
+          <textarea for="otro" rows="3" id="otro">Detalles</textarea>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
