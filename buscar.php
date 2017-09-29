@@ -183,7 +183,6 @@ function search_count($buscar, $valor)
                 // Display the results of the search
                 $result = search($_POST['buscar'], $_POST['valor']);
                 $num    = search_count($_POST['buscar'], $_POST['valor']);
-                echo $_POST['buscar'] . " - " . $_POST['valor'];
               }
               else
               {
