@@ -147,7 +147,9 @@
 
       <h1>Registrar persona</h1>
 
-      <p>Por favor, recuerde que la información que usted provee será visible al público.  El creador de la aplicación no se hace responsable del uso de la misma y la información aquí disponible.</p>
+      <p>Por favor, recuerde que la información que usted provee será visible al público.</p>
+
+      <p>El creador de la aplicación no se hace responsable del uso de la misma y la información aquí disponible.</p>
 
       <p>Por favor provea la siguiente información.</p>
 
@@ -307,7 +309,7 @@
         </div>
 
         <div class="form-group">
-          <label for="comunicacion">Comunicación Celular: *</label><br>
+          <label for="comunicacion">Comunicación: *</label><br>
           <select name="comunicacion" size="1">
             <option value=""              <?php if($_POST[''] == '')                        { echo ' selected = "selected"';} ?> >Escoja</option>
             <option value="Sí"            <?php if($_POST['comunicacion'] == 'Sí')          { echo ' selected = "selected"';} ?> >Sí</option>

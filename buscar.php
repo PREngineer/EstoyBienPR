@@ -1,5 +1,46 @@
 <?php
 
+function display_all()
+{
+  // The query
+  $query = mysql_query("SELECT *
+                        FROM `personas`
+                        ORDER BY `pueblo` ASC, `nombre`");
+
+  // Returns all
+  return $query;
+}
+
+function search($buscar, $valor)
+{
+  // Get the information from DB
+  $query = "SELECT *
+            FROM `personas`
+            WHERE `$buscar` LIKE '%" . $valor . "%'
+            ORDER BY `pueblo` ASC, `nombre`";
+
+  // Return it
+  return $query;
+}
+
+function count_all()
+{
+  // The query
+  $query = mysql_query("SELECT COUNT(`nombre`) from `personas`");
+
+  // Returns the number (row #0 since it will only be one result in the query)
+  return mysql_result($query, 0);
+}
+
+function search_count($buscar, $valor)
+{
+  // The query
+  $query = mysql_query("SELECT COUNT(`nombre`) from `personas` WHERE `$buscar` LIKE '%" . $valor . "%'");
+
+  // Returns the number
+  return mysql_result($query, 0);
+}
+
 ?>
 
 
@@ -69,9 +110,123 @@
 
       <h1>Buscar Persona</h1>
 
+      <!-- Drop down menu for sorting -->
+      Buscar por:
+      <form method="POST">
+        <select name="buscar" size="1">
+            <option value="TODO"    <?php if($_POST['buscar'] == 'TODO')         { echo ' selected = "selected"';} ?>>TODO/option>
+            <option value="nombre"  <?php if($_POST['buscar'] == 'nombre')   { echo ' selected = "selected"';} ?>>Nombre</option>
+            <option value="edad"    <?php if($_POST['buscar'] == 'edad')     { echo ' selected = "selected"';} ?>>Edad</option>
+            <option value="pueblo"  <?php if($_POST['buscar'] == 'pueblo')   { echo ' selected = "selected"';} ?>>Pueblo</option>
+            <option value="zip"     <?php if($_POST['buscar'] == 'zip')      { echo ' selected = "selected"';} ?>>Zip Code</option>
+        </select>
+        <!-- Search box -->
+        <input type="text" placeholder="Buscar..." name="valor" value="<?php print_r($_POST['valor']); ?>">
+        <!-- GO! button -->
+        <button type="submit" class="btn btn-default">Buscar</button>
+      </form>
 
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Resultados</div>
+        <div class="panel-body">
+          <p>Aquí están los resultados para la búsqueda.</p>
+        </div>
 
+        <!-- Table -->
+        <table class="table">
+          <thead>
+            <tr>
+            <th>Número de Récord</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Pueblo</th>
+            <th>Zip Code</th>
+            <th>Salud</th>
+            <th>Propiedad</th>
+            <th>Comida</th>
+            <th>Agua</th>
+            <th>Electricidad</th>
+            <th>Comunicación</th>
+            <th>Contacto</th>
+            <th>Otro</th>
+            <th>Fecha de Informe</th>
+            <tr>
+          </thead>
 
+          <?php
+            // If page was just loaded (nothing was posted)
+            if( empty($_POST) === true || $_POST['buscar'] == "TODO" )
+            { // Display by name
+              $result = display_all();
+              $num    = count_all($string);
+              echo $num . " resultado(s).<br>";
+            }
+            // If page has posted
+            else
+            {
+              // And a Search string was passed
+              if(empty($_POST['valor']) === false)
+              {
+                // Display the results of the search
+                $string = mysql_real_escape_string($_POST['valor']);
+                $result = search($string);
+                $num    = search_count($string);
+                // Show the results message
+                echo $num . " resultado(s) para su busqueda: '" . $string ."' <br>";
+              }
+            }
+            else
+            {
+              echo '<div class="alert alert-danger alert-dismissible" role="alert">
+                    Debe especificar lo que busca.
+                    </div>';
+            }
+
+            $i = 0;
+            // Go over every result and display on the table.
+            while ($i < $num)
+            {
+              // Get everything for the Campaign
+              $nombre       = mysql_result($result, $i, "");
+              $edad         = mysql_result($result, $i, "");
+              $pueblo       = mysql_result($result, $i, "");
+              $zip          = mysql_result($result, $i, "");
+              $salud        = mysql_result($result, $i, "");
+              $propiedad    = mysql_result($result, $i, "");
+              $comida       = mysql_result($result, $i, "");
+              $agua         = mysql_result($result, $i, "");
+              $electricidad = mysql_result($result, $i, "");
+              $comunicacion = mysql_result($result, $i, "");
+              $contacto     = mysql_result($result, $i, "");
+              $otro         = mysql_result($result, $i, "");
+              $timestamp    = mysql_result($result, $i, "");
+
+              echo '
+              <tr>
+                <td>' . $i .'</td>
+                <td>' . $nombre .'</td>
+                <td>' . $edad .'</td>
+                <td>' . $pueblo .'</td>
+                <td>' . $zip .'</td>
+                <td>' . $salud .'</td>
+                <td>' . $propiedad .'</td>
+                <td>' . $comida .'</td>
+                <td>' . $agua .'</td>
+                <td>' . $electricidad .'</td>
+                <td>' . $comunicacion .'</td>
+                <td>' . $contacto .'</td>
+                <td>' . $otro .'</td>
+                <td>' . $timestamp .'</td>
+              </tr>';
+
+              $i++;
+            }
+
+          ?>
+
+        </table>
+      </div>
 
     </div>
 
