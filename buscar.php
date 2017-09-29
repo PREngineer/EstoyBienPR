@@ -192,13 +192,13 @@ function search_count($buscar, $valor)
       </div>';
               }
             }
+      ?>
 
-                echo '
       <div class="table-responsive">
 
         <!-- Default panel contents -->
         <div class="panel-heading">
-        ' . $num . ' resultado(s)
+        <?php echo $num;?> resultado(s)
         </div>
 
         <div class="panel-body">
@@ -224,8 +224,9 @@ function search_count($buscar, $valor)
               <th>Otro</th>
               <th>Fecha de Informe</th>
             </tr>
-          </thead>';
+          </thead>
 
+      <?php
             $i = 0;
             // Go over every result and display on the table.
             while ($i < $num)
@@ -245,28 +246,28 @@ function search_count($buscar, $valor)
               $otro         = mysql_result($result, $i, "otro");
               $timestamp    = mysql_result($result, $i, "timestamp");
 
-              echo '
+      ?>
             <tr>
-              <td>' . ($i+1) .'</td>
-              <td>' . $nombre .'</td>
-              <td>' . $edad .'</td>
-              <td>' . $pueblo .'</td>
-              <td>' . $zip .'</td>
-              <td>' . $salud .'</td>
-              <td>' . $propiedad .'</td>
-              <td>' . $comida .'</td>
-              <td>' . $agua .'</td>
-              <td>' . $electricidad .'</td>
-              <td>' . $comunicacion .'</td>
-              <td>' . $contacto .'</td>
-              <td>' . $otro .'</td>
-              <td>' . $timestamp .'</td>
-            </tr>';
-
+              <td><?php echo ($i+1);?></td>
+              <td><?php echo $nombre;?></td>
+              <td><?php echo $edad;?></td>
+              <td><?php echo $pueblo;?></td>
+              <td><?php echo $zip;?></td>
+              <td><?php echo $salud;?></td>
+              <td><?php echo $propiedad;?></td>
+              <td><?php echo $comida;?></td>
+              <td><?php echo $agua;?></td>
+              <td><?php echo $electricidad;?></td>
+              <td><?php echo $comunicacion;?></td>
+              <td><?php echo $contacto;?></td>
+              <td><?php echo $otro;?></td>
+              <td><?php echo $timestamp;?></td>
+            </tr>
+      <?php
               $i++;
             }
 
-          ?>
+      ?>
 
         </table>
       </div>
