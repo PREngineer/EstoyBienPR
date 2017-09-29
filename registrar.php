@@ -132,10 +132,12 @@
           <label for="nombre">Nombre: *</label>
           <input type="text" class="form-control" name="nombres">
         </div>
+
         <div class="form-group">
           <label for="edad">Edad:</label>
           <input type="text" class="form-control" name="edad">
         </div>
+
         <div class="form-group">
           <label for="pueblo">Pueblo:</label>
           <select name="pueblo" size="1">
@@ -220,42 +222,85 @@
             <option value="Yauco"         <?php if($_POST['pueblo'] == 'Yauco')         { echo ' selected = "selected"';} ?> >Yauco</option>
           </select>
         </div>
+
         <div class="form-group">
           <label for="zip">Zip:</label>
           <input type="text" class="form-control" name="zip">
         </div>
+
         <div class="form-group">
           <label for="salud">Salud: *</label>
-          <input type="text" class="form-control" name="salud">
+          <select name="salud" size="1">
+            <option value=""              <?php if($_POST['salud'] == '')               { echo ' selected = "selected"';} ?> >Escoja</option>
+            <option value="Bien"          <?php if($_POST['salud'] == 'Bien')           { echo ' selected = "selected"';} ?> >Bien</option>
+            <option value="Enfermo"       <?php if($_POST['salud'] == 'Enfermo')        { echo ' selected = "selected"';} ?> >Enfermo</option>
+            <option value="Herido"        <?php if($_POST['salud'] == 'Herido')         { echo ' selected = "selected"';} ?> >Herido</option>
+            <option value="Hospitalizado" <?php if($_POST['salud'] == 'Hospitalizado')  { echo ' selected = "selected"';} ?> >Hospitalizado</option>
+            <option value="Fallecido"     <?php if($_POST['salud'] == 'Fallecido')      { echo ' selected = "selected"';} ?> >Fallecido</option>
+          </select>
         </div>
+
         <div class="form-group">
           <label for="propiedad">Propiedad: *</label>
-          <input type="text" class="form-control" name="propiedad">
+          <select name="propiedad" size="1">
+            <option value=""              <?php if($_POST['propiedad'] == '')               { echo ' selected = "selected"';} ?> >Escoja</option>
+            <option value="Bien"          <?php if($_POST['propiedad'] == 'Bien')           { echo ' selected = "selected"';} ?> >Bien</option>
+            <option value="Daños Menores" <?php if($_POST['propiedad'] == 'Daños Menores')  { echo ' selected = "selected"';} ?> >Daños Menores</option>
+            <option value="Daños Mayores" <?php if($_POST['propiedad'] == 'Daños Mayores')  { echo ' selected = "selected"';} ?> >Daños Mayores</option>
+            <option value="Pérdida Total" <?php if($_POST['propiedad'] == 'Pérdida Total')  { echo ' selected = "selected"';} ?> >Pérdida Total</option>
+          </select>
         </div>
+
         <div class="form-group">
           <label for="comida">Comida: *</label>
-          <input type="text" class="form-control" name="comida">
+          <select name="comida" size="1">
+            <option value=""              <?php if($_POST['comida'] == '')              { echo ' selected = "selected"';} ?> >Escoja</option>
+            <option value="Nada"          <?php if($_POST['comida'] == 'Nada')          { echo ' selected = "selected"';} ?> >Nada</option>
+            <option value="1 Semana"      <?php if($_POST['comida'] == '1 Semana')      { echo ' selected = "selected"';} ?> >1 Semana</option>
+            <option value="2 Semanas"     <?php if($_POST['comida'] == '2 Semanas')     { echo ' selected = "selected"';} ?> >2 Semanas</option>
+            <option value="3+ Semanas"    <?php if($_POST['comida'] == '3+ Semanas')    { echo ' selected = "selected"';} ?> >3+ Semanas</option>
+          </select>
         </div>
+
         <div class="form-group">
           <label for="agua">Agua: *</label>
-          <input type="text" class="form-control" name="agua">
+          <select name="agua" size="1">
+            <option value=""              <?php if($_POST['agua'] == '')              { echo ' selected = "selected"';} ?> >Escoja</option>
+            <option value="Nada"          <?php if($_POST['agua'] == 'Nada')          { echo ' selected = "selected"';} ?> >Nada</option>
+            <option value="1 Semana"      <?php if($_POST['agua'] == '1 Semana')      { echo ' selected = "selected"';} ?> >1 Semana</option>
+            <option value="2 Semanas"     <?php if($_POST['agua'] == '2 Semanas')     { echo ' selected = "selected"';} ?> >2 Semanas</option>
+            <option value="3+ Semanas"    <?php if($_POST['agua'] == '3+ Semanas')    { echo ' selected = "selected"';} ?> >3+ Semanas</option>
+          </select>
         </div>
+
         <div class="form-group">
           <label for="elec">Electricidad: *</label>
-          <input type="text" class="form-control" name="elec">
+          <select name="elec" size="1">
+            <option value=""              <?php if($_POST[''] == '')            { echo ' selected = "selected"';} ?> >Escoja</option>
+            <option value="Sí"            <?php if($_POST['elec'] == 'Sí')      { echo ' selected = "selected"';} ?> >Sí</option>
+            <option value="No"            <?php if($_POST['elec'] == 'No')      { echo ' selected = "selected"';} ?> >No</option>
+          </select>
         </div>
+
         <div class="form-group">
-          <label for="comunicacion">Comunicación: *</label>
-          <input type="text" class="form-control" name="comunicacion">
+          <label for="comunicacion">Comunicación Celular: *</label>
+          <select name="comunicacion" size="1">
+            <option value=""              <?php if($_POST[''] == '')                    { echo ' selected = "selected"';} ?> >Escoja</option>
+            <option value="Sí"            <?php if($_POST['comunicacion'] == 'Sí')      { echo ' selected = "selected"';} ?> >Sí</option>
+            <option value="No"            <?php if($_POST['comunicacion'] == 'No')      { echo ' selected = "selected"';} ?> >No</option>
+          </select>
         </div>
+
         <div class="form-group">
           <label for="contacto">Contacto:</label>
           <input type="text" class="form-control" name="contacto">
         </div>
+
         <div class="form-group">
           <label for="otro">Otro:</label>
           <textarea type="text" class="form-control" rows="5" name="otro">Detalles</textarea>
         </div>
+
         <button type="submit" class="btn btn-default">Someter</button>
       </form>
 
