@@ -1,5 +1,62 @@
 <?php
 
+// If the POST has information
+if(empty($_POST) === false)
+{
+  // Establish which fields are required
+  $required_fields = array('nombre', 'pueblo', 'zip', 'salud', 'propiedad', 'comida', 'agua', 'elec', 'comunicacion');
+
+  // Check all the values provided in the post
+  foreach($_POST as $key=>$value)
+  {
+    // If any of the required fields are not provided
+    if( (empty($value) && in_array($key, $required_fields) === true) )
+    {
+      // Make an error that says it.
+      $errors[] = 'Los campos con asteriscos (*) son necesarios.';
+      break 1;
+    }
+  }
+
+  // If the post is not empty and there are no errors
+  if(empty($_POST) === false && empty($errors) === true)
+  {
+    // Save the nfpo data in array
+    $data = array(
+        'nombre'        => $_POST['nombre'],
+        'pueblo'        => $_POST['pueblo'],
+        'zip'           => $_POST['zip'],
+        'salud'         => $_POST['salud'],
+        'propiedad'     => $_POST['propiedad'],
+        'comida'        => $_POST['comida'],
+        'agua'          => $_POST['agua'],
+        'elec'          => $_POST['elec'],
+        'comunicacion'  => $_POST['comunicacion']
+      );
+
+    // Create the NFPO entry in DB
+    //guardar($data);
+
+    // Enable Success Message
+    $success = true;
+  }
+
+  // If there are errors
+  else if(empty($errors) === false)
+  {
+    echo '<div class="alert alert-danger alert-dismissible" role="alert">';
+    // Display the errors
+    echo $errors;
+    echo '</div>';
+  }
+
+  // If the Registration went through
+  if($success === true)
+  {
+    echo '<div class="alert alert-success alert-dismissible" role="alert">Información guardada.</div>';
+  }
+}
+
 ?>
 
 
@@ -73,59 +130,60 @@
 
       <form>
         <div class="form-group">
-          <label for="nombres">Nombre:</label>
-          <input required="required" type="text" class="form-control" id="nombres">
+          <label for="nombre">Nombre: [*]</label>
+          <input type="text" class="form-control" name="nombres">
         </div>
         <div class="form-group">
           <label for="edad">Edad:</label>
-          <input type="text" class="form-control" id="edad">
+          <input type="text" class="form-control" name="edad">
         </div>
         <div class="form-group">
-          <label for="pueblo">Pueblo:</label>
-          <input required="required" type="text" class="form-control" id="pueblo">
+          <label for="pueblo">Pueblo: [*]</label>
+          <input type="text" class="form-control" name="pueblo">
         </div>
         <div class="form-group">
           <label for="zip">Zip:</label>
-          <input type="text" class="form-control" id="zip">
+          <input type="text" class="form-control" name="zip">
         </div>
         <div class="form-group">
-          <label for="salud">Salud:</label>
-          <input required="required" type="text" class="form-control" id="salud">
+          <label for="salud">Salud: [*]</label>
+          <input type="text" class="form-control" name="salud">
         </div>
         <div class="form-group">
-          <label for="propiedad">Propiedad:</label>
-          <input required="required" type="text" class="form-control" id="propiedad">
+          <label for="propiedad">Propiedad: [*]</label>
+          <input type="text" class="form-control" name="propiedad">
         </div>
         <div class="form-group">
-          <label for="comida">Comida:</label>
-          <input required="required" type="text" class="form-control" id="comida">
+          <label for="comida">Comida: [*]</label>
+          <input type="text" class="form-control" name="comida">
         </div>
         <div class="form-group">
-          <label for="agua">Agua:</label>
-          <input required="required" type="text" class="form-control" id="agua">
+          <label for="agua">Agua: [*]</label>
+          <input type="text" class="form-control" name="agua">
         </div>
         <div class="form-group">
-          <label for="elec">Electricidad:</label>
-          <input required="required" type="text" class="form-control" id="elec">
+          <label for="elec">Electricidad: [*]</label>
+          <input type="text" class="form-control" name="elec">
         </div>
         <div class="form-group">
-          <label for="comunicacion">Comunicación:</label>
-          <input required="required" type="text" class="form-control" id="comunicacion">
+          <label for="comunicacion">Comunicación: [*]</label>
+          <input type="text" class="form-control" name="comunicacion">
         </div>
         <div class="form-group">
           <label for="contacto">Contacto:</label>
-          <input type="text" class="form-control" id="contacto">
+          <input type="text" class="form-control" name="contacto">
         </div>
         <div class="form-group">
           <label for="otro">Otro:</label>
-          <textarea type="text" class="form-control" rows="3" id="otro">Detalles</textarea>
+          <textarea type="text" class="form-control" rows="5" name="otro">Detalles</textarea>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button type="submit" class="btn btn-default">Someter</button>
       </form>
 
 
-
     </div>
+
+    <br><br>
 
 <!-- ******************* Footer Section ******************* -->
     <div class="container">
