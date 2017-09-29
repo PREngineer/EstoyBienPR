@@ -129,7 +129,7 @@
 
       <form method="POST">
         <div class="form-group">
-          <label for="nombre">Nombre: [*]</label>
+          <label for="nombre">Nombre: *</label>
           <input type="text" class="form-control" name="nombres">
         </div>
         <div class="form-group">
@@ -225,27 +225,27 @@
           <input type="text" class="form-control" name="zip">
         </div>
         <div class="form-group">
-          <label for="salud">Salud: [*]</label>
+          <label for="salud">Salud: *</label>
           <input type="text" class="form-control" name="salud">
         </div>
         <div class="form-group">
-          <label for="propiedad">Propiedad: [*]</label>
+          <label for="propiedad">Propiedad: *</label>
           <input type="text" class="form-control" name="propiedad">
         </div>
         <div class="form-group">
-          <label for="comida">Comida: [*]</label>
+          <label for="comida">Comida: *</label>
           <input type="text" class="form-control" name="comida">
         </div>
         <div class="form-group">
-          <label for="agua">Agua: [*]</label>
+          <label for="agua">Agua: *</label>
           <input type="text" class="form-control" name="agua">
         </div>
         <div class="form-group">
-          <label for="elec">Electricidad: [*]</label>
+          <label for="elec">Electricidad: *</label>
           <input type="text" class="form-control" name="elec">
         </div>
         <div class="form-group">
-          <label for="comunicacion">Comunicación: [*]</label>
+          <label for="comunicacion">Comunicación: *</label>
           <input type="text" class="form-control" name="comunicacion">
         </div>
         <div class="form-group">
