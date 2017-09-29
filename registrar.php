@@ -116,11 +116,11 @@
                         VALUES ('$nombre', '$edad', '$pueblo', '$zip', '$salud', '$propiedad', '$comida',
                         '$agua', '$elec', '$comunicacion', '$contacto', '$otro')");
 
-          echo "INSERT INTO `personas`
+          /*echo "INSERT INTO `personas`
                         (`nombre`, `edad`, `pueblo`, `zip`, `salud`, `propiedad`, `comida`,
                         `agua`, `elec`, `comunicacion`, `contacto`, `otro`)
                         VALUES ('$nombre', '$edad', '$pueblo', '$zip', '$salud', '$propiedad', '$comida',
-                        '$agua', '$elec', '$comunicacion', '$contacto', '$otro')";
+                        '$agua', '$elec', '$comunicacion', '$contacto', '$otro')";*/
 
           // Enable Success Message
           $success = true;
@@ -299,7 +299,7 @@
           <label for="elec">Electricidad: *</label><br>
           <select name="elec" size="1">
             <option value=""              <?php if($_POST[''] == '')            { echo ' selected = "selected"';} ?> >Escoja</option>
-            <option value="Si"            <?php if($_POST['elec'] == 'Si')      { echo ' selected = "selected"';} ?> >Sí</option>
+            <option value="Sí"            <?php if($_POST['elec'] == 'Sí')      { echo ' selected = "selected"';} ?> >Sí</option>
             <option value="No"            <?php if($_POST['elec'] == 'No')      { echo ' selected = "selected"';} ?> >No</option>
           </select>
         </div>
@@ -308,7 +308,7 @@
           <label for="comunicacion">Comunicación Celular: *</label><br>
           <select name="comunicacion" size="1">
             <option value=""              <?php if($_POST[''] == '')                        { echo ' selected = "selected"';} ?> >Escoja</option>
-            <option value="Si"            <?php if($_POST['comunicacion'] == 'Si')          { echo ' selected = "selected"';} ?> >Sí</option>
+            <option value="Sí"            <?php if($_POST['comunicacion'] == 'Sí')          { echo ' selected = "selected"';} ?> >Sí</option>
             <option value="No"            <?php if($_POST['comunicacion'] == 'No')          { echo ' selected = "selected"';} ?> >No</option>
             <option value="Va Y Viene"    <?php if($_POST['comunicacion'] == 'Va Y Viene')  { echo ' selected = "selected"';} ?> >Va Y Viene</option>
           </select>
