@@ -114,7 +114,7 @@
                         (`nombre`, `edad`, `pueblo`, `zip`, `salud`, `propiedad`, `comida`,
                         `agua`, `elec`, `comunicacion`, `contacto`, `otro`)
                         VALUES ('$nombre', '$edad', '$pueblo', '$zip', '$salud', '$propiedad', '$comida',
-                        '$agua', '$elec', '$comunicacion', '$contacto', '$otro')";
+                        '$agua', '$elec', '$comunicacion', '$contacto', '$otro')");
 
           // Enable Success Message
           $success = true;
